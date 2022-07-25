@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
   let navigate = useNavigate();
   const [token, setToken] = useState(null);
   const [movieList, setMovieList] = useState([]);
+  const [movieDetail, setMovieDetail] = useState([]);
 
   /* Function to validate email and password */
   const validateEmail = (email, password) => {
@@ -43,8 +44,8 @@ export const DataProvider = ({ children }) => {
       axios
           .post("http://challenge-react.alkemy.org", { email, password})
           .then(res => {
-              localStorage.setItem("token", res.data.token);
-              navigate("/home");
+            sessionStorage.setItem("token", res.data.token);
+              handleNavigation("/home");
           })
           .catch(err => {
               console.log(err);
@@ -54,8 +55,12 @@ export const DataProvider = ({ children }) => {
   /* Function to handle token */
   const handleToken = () => {
     if(!token){
-      setToken(localStorage.getItem("token"));
+      setToken(sessionStorage.getItem("token"));
     }
+  }
+
+  const handleNavigation = (address) => {
+    navigate(address);
   }
 
   return (
@@ -65,7 +70,10 @@ export const DataProvider = ({ children }) => {
         handleToken,
         token,
         setMovieList,
-        movieList
+        movieList,
+        handleNavigation,
+        movieDetail,
+        setMovieDetail
       }}
     >
       {children}

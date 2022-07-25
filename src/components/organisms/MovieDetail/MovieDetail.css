@@ -1,0 +1,85 @@
+.movieDetail{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding-right: 50px;
+    background-color: #1c4da4;
+    margin-top: 50px;
+}
+
+.movieDetail_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.movieDetail_title{
+    font-size: 30px;
+    color: #FFD500;
+    display: inline-block;
+    font-family: "anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    padding-top: 30px;
+    width: 500px;
+}
+
+.movieDetail_date{
+    font-size: 30px;
+    color: #ffd500b7;
+    display: inline-block;
+    font-family: "anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.movieDetail_genres_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.movieDetail_genres, .movieDetail_runtime{
+    font-size: 17px;
+    color: #fff;
+    display: block;
+    font-family: "oswald", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    margin-right:10px;
+}
+
+.movieDetail_overview{
+    width: 500px;
+    font-family: "oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    margin-top: 0;
+}
+
+.movieDetail_overview_title{
+    width: 500px;
+    font-family: "oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.movieDetail_line{
+    background-color: #f39ccd;
+    height: 2px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 11px 2px #EA88BA;
+
+}

@@ -4,13 +4,10 @@ import Input from "../../atoms/Input/Input";
 import Button from "../../atoms/Button/Button";
 import AppContext from "../../../context/AppContext";
 
-import { Navigate } from "react-router-dom";
-
 const LoginCard = () => {
     const {
         handleSubmit,
-        handleToken,
-        token,
+        handleToken
     } = useContext(AppContext);
     
     useEffect(() => {
@@ -18,17 +15,14 @@ const LoginCard = () => {
     }, [handleToken]);   
 
     return(
-        <>
-            {token && <Navigate to="/home" />}
-            <div className="loginCard_container">
-                <h1 className="loginCard_title">Welcome</h1>
-                <form className="loginCard_form" onSubmit={handleSubmit}>
-                    <Input type="email" placeholder="Email" />
-                    <Input type="password" placeholder="Password" />
-                    <Button title="Login" type="submit"/>
-                </form>
-            </div>
-        </>
+        <div className="loginCard_container">
+            <h1 className="loginCard_title">Welcome</h1>
+            <form className="loginCard_form" onSubmit={handleSubmit}>
+                <Input type="email" placeholder="Email" />
+                <Input type="password" placeholder="Password" />
+                <Button title="Login" type="submit"/>
+            </form>
+        </div>
         
     );
 }

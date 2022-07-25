@@ -1,0 +1,11 @@
+.MovieList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1500px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}

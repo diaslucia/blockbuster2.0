@@ -1,30 +1,29 @@
 import { useContext } from "react";
-import "./Home.css"
-import MovieList from "../organisms/MovieList/MovieList";
+import "./Detail.css"
+import MovieDetail from "../organisms/MovieDetail/MovieDetail";
 import Nav from "../molecules/Nav/Nav";
+import Logo from "../atoms/Logo/Logo";
 import { Navigate } from "react-router-dom";
 import AppContext from "../../context/AppContext";
-import OptionsHome from "../organisms/OptionsHome/OptionsHome";
 
-
-const Home = () => {
+const Detail = () => {
     const {
         token
     } = useContext(AppContext);
-    
+
+    let query = new URLSearchParams(window.location.search);
+    let movieID = query.get("movieID");
+
     return (
         <>
             {!token && <Navigate to="/" />}
-            <div className="home">
+            <div className="detail">
                 <Nav />
-                <section className="home_list">
-                    <OptionsHome />
-                    <MovieList />
-                </section>
+                <MovieDetail info={movieID}/>
             </div>
         </>
         
     );
 }
 
-export default Home;
+export default Detail;
