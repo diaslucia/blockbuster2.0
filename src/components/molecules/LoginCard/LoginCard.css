@@ -1,0 +1,26 @@
+.loginCard_container{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 50px;
+    border: 2px solid #f39ccd;
+    box-shadow: 0px 0px 11px 2px #EA88BA;
+}
+
+.loginCard_title{
+    font-size: 35px;
+    font-family: anton, sans-serif;
+    color: #1c4da4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.loginCard_form{
+    display: flex;
+    flex-direction: column;
+}
