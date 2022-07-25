@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
 import "./MovieList.css";   
 import axios from 'axios';
-import MovieCard from '../../molecules/MovieCard/MovieCard';
+import MovieCard from '../../atoms/MovieImg/MovieImg';
 import AppContext from "../../../context/AppContext";
 import { API_KEY } from "../../../secrets"; 
 

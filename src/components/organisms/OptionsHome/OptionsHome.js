@@ -1,5 +1,5 @@
 import "./OptionsHome.css"
-import Searchbar from "../../atoms/Searchbar/Searchbar"
+import Searchbar from "../../molecules/Searchbar/Searchbar"
 
 const OptionsHome = () => {
     return (
